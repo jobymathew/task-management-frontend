@@ -1,20 +1,23 @@
 {
   "name": "task-management-frontend",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Frontend for Task Management System",
   "scripts": {
-    "build:css": "tailwindcss -i ./styles.css -o ./dist/styles.css --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "http-server -p 8080 -c-1",
+    "build:css": "tailwindcss -i ./styles.css -o ./dist/styles.css",
+    "watch:css": "tailwindcss -i ./styles.css -o ./dist/styles.css --watch",
+    "build": "npm run build:css",
+    "dev": "concurrently \"npm run watch:css\" \"npm run start\""
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "angular": "^1.5.8",
-    "angular-route": "^1.5.8",
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.41",
-    "tailwindcss": "^3.4.9"
+    "angular": "1.5.8",
+    "angular-route": "1.5.8"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "concurrently": "^8.2.2",
+    "http-server": "^14.1.1",
+    "postcss": "^8.4.23",
+    "tailwindcss": "^3.3.2"
   }
 }

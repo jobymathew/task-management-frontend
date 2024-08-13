@@ -1,0 +1,26 @@
+<form ng-submit="updateTask()" class="bg-white p-4 rounded shadow">
+    <div class="mb-4">
+        <label for="title" class="block text-gray-700 font-bold mb-2">Title</label>
+        <input type="text" id="title" ng-model="task.title" required class="w-full px-3 py-2 border rounded">
+    </div>
+    <div class="mb-4">
+        <label for="description" class="block text-gray-700 font-bold mb-2">Description</label>
+        <textarea id="description" ng-model="task.description" required class="w-full px-3 py-2 border rounded"></textarea>
+    </div>
+    <div class="mb-4">
+        <label for="status" class="block text-gray-700 font-bold mb-2">Status</label>
+        <select id="status" ng-model="task.status" required class="w-full px-3 py-2 border rounded">
+            <option value="Pending">Pending</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Done">Done</option>
+        </select>
+    </div>
+    <div class="mb-4">
+        <label for="dueDate" class="block text-gray-700 font-bold mb-2">Due Date</label>
+        <input type="date" id="dueDate" ng-model="task.dueDate" required class="w-full px-3 py-2 border rounded">
+    </div>
+    <div class="flex justify-between">
+        <a href="#/" class="text-blue-500 hover:text-blue-700">Cancel</a>
+        <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Update Task</button>
+    </div>
+</form>

@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html ng-app="taskApp">
+
 <head>
     <title>Task Management System</title>
     <link href="dist/styles.css" rel="stylesheet">
     <script src="node_modules/angular/angular.min.js"></script>
     <script src="node_modules/angular-route/angular-route.min.js"></script>
     <script src="app/app.js"></script>
-    <script src="app/components/taskList.component.js"></script>
-    <script src="app/components/taskForm.component.js"></script>
+    <script src="app/controllers/taskList.controller.js"></script>
+    <script src="app/controllers/taskDetail.controller.js"></script>
+    <script src="app/controllers/taskEdit.controller.js"></script>
+    <script src="app/controllers/taskAdd.controller.js"></script>
+    <!-- <script src="app/components/taskList.component.js"></script> -->
+    <!-- <script src="app/components/taskForm.component.js"></script> -->
     <script src="app/services/tasks.service.js"></script>
 </head>
+
 <body class="bg-gray-100">
     <div class="container mx-auto p-4">
         <h1 class="text-3xl font-bold mb-4">Task Management System</h1>
+        <nav class="mb-4">
+            <a href="#/" class="text-blue-500 hover:text-blue-700 mr-4">Task List</a>
+            <a href="#/add" class="text-blue-500 hover:text-blue-700">Add Task</a>
+        </nav>
         <div ng-view></div>
     </div>
 </body>
+
 </html>
